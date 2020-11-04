@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'ch.virt'
-version '1.2.1'
+version '2.0.1-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -11,6 +11,8 @@ repositories {
 
 dependencies {
     compile 'com.google.code.gson:gson:2.8.6'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0-alpha-6'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '4.0.0-alpha-6'
 }
 
 

@@ -14,16 +14,38 @@ import java.nio.file.Files;
 public class Config {
     public static final String NAME = "deployconfig.json";
 
+
+    private String buildWebsite = "makecode.mindstorms.com";
+    private String projectName = "Enter Project Name";
+    private String buildFolder = "built";
     private boolean infinityMode = false;
 
     private CodeConfig code = new CodeConfig();
+
+    private BrowserConfig browser = new BrowserConfig();
 
     public CodeConfig getCode() {
         return code;
     }
 
+    public String getBuildFolder() {
+        return buildFolder;
+    }
+
     public boolean isInfinityMode() {
         return infinityMode;
+    }
+
+    public BrowserConfig getBrowser() {
+        return browser;
+    }
+
+    public String getBuildWebsite() {
+        return buildWebsite;
+    }
+
+    public String getProjectName() {
+        return projectName;
     }
 
     public static Config load(){
@@ -41,4 +63,5 @@ public class Config {
         }
         return null;
     }
+
 }
